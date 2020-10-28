@@ -4,6 +4,7 @@ const Bodies = Matter.Bodies;
 
 var engine, world;
 var box1, pig1;
+var platform;
 
 function setup(){
     var canvas = createCanvas(1200,400);
@@ -29,6 +30,7 @@ function setup(){
     log5 = new Log(870,120,150, -PI/7);
 
     bird = new Bird(100,100);
+    platform = new Ground(100, 300, 250, 170);
 
 }
 
@@ -54,4 +56,28 @@ function draw(){
     log5.display();
 
     bird.display();
+
+    platform.display();
 }
+
+
+/*
+
+- Working Directory: Files are first modified in the working directory
+- Staging area: Staging area hosts all the files which are changed before they are committed.
+- repository: A repository hosts all the different committed versions of the files.
+
+
+
+git add name_of_the_file
+git add sketch.js
+
+git commit -m "Commited properly"
+
+
+git config --global user.email "you@example.com"
+
+
+git config --global user.name "Your Name"
+
+*/
